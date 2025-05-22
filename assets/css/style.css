@@ -400,4 +400,49 @@ body {
     z-index: 1000;
 }
 
-/* Add this JavaScript for the scroll indicator */
+/* Add these footer styles to your CSS */
+footer {
+    background: var(--clr-secondary);
+    padding: var(--space-lg) 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer .container {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-lg);
+}
+
+.social-link {
+    color: var(--clr-text-primary);
+    font-size: var(--fs-large);
+    transition: color var(--transition-normal);
+}
+
+.social-link:hover {
+    color: var(--clr-accent);
+}
+
+/* Add missing grid styles */
+.skills-grid,
+.work-grid {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Add missing form styles */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
