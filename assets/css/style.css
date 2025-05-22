@@ -165,3 +165,239 @@ body {
         --fs-large: 1.25rem;
     }
 }
+/* Add these sophisticated effects to your existing CSS */
+
+/* Refined Navigation */
+.navbar {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing accent effects */
+.logo {
+    position: relative;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--clr-accent);
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.logo:hover::before {
+    opacity: 0.3;
+}
+
+/* Refined nav links with better hover effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--clr-accent);
+    transition: all var(--transition-normal);
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px var(--clr-accent);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: calc(100% - var(--space-lg));
+}
+
+/* Card hover effects */
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(
+        145deg,
+        rgba(37, 37, 37, 0.9) 0%,
+        rgba(26, 26, 26, 0.8) 100%
+    );
+    backdrop-filter: blur(5px);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(100, 255, 218, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(100, 255, 218, 0.1);
+}
+
+/* Button refinements */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.btn:hover::before {
+    transform: translateX(100%);
+}
+
+.btn-primary {
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+.btn-secondary {
+    backdrop-filter: blur(5px);
+}
+
+/* Hero section enhancement */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(
+        circle at top right,
+        rgba(100, 255, 218, 0.1),
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+/* Animated skill cards */
+.skill-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(
+        145deg,
+        rgba(37, 37, 37, 0.9) 0%,
+        rgba(26, 26, 26, 0.8) 100%
+    );
+    transition: all var(--transition-normal);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(100, 255, 218, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(100, 255, 218, 0.1);
+}
+
+.skill-card i {
+    transition: transform var(--transition-normal);
+}
+
+.skill-card:hover i {
+    transform: scale(1.2);
+}
+
+/* Blog card refinements */
+.blog-card {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        rgba(37, 37, 37, 0.9) 0%,
+        rgba(26, 26, 26, 0.8) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    padding: 2px;
+    background: linear-gradient(
+        145deg,
+        rgba(100, 255, 218, 0.2),
+        transparent
+    );
+    mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.blog-card:hover::before {
+    opacity: 1;
+}
+
+/* Form input refinements */
+.form-input,
+.form-textarea {
+    background: rgba(37, 37, 37, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all var(--transition-normal);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--clr-accent);
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
+    background: rgba(37, 37, 37, 0.8);
+}
+
+/* Social links enhancement */
+.social-link {
+    position: relative;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background: var(--clr-accent);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: all var(--transition-normal);
+}
+
+.social-link:hover::before {
+    transform: scale(1);
+    opacity: 0.1;
+}
+
+.social-link i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--clr-accent);
+    transform-origin: left;
+    z-index: 1000;
+}
+
+/* Add this JavaScript for the scroll indicator */
