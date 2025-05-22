@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional writer portfolio showcasing creative works and writing services">
-    <title>Writer Portfolio | Your Name</title>
+    <title>Aatif | Writer & Content Creator</title>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/images/pen-favicon.png">
-    <!-- Existing meta tags -->
+    
+    <!-- SEO & Social Meta Tags -->
     <meta property="og:title" content="Aatif's Portfolio">
     <meta property="og:description" content="Professional writer portfolio showcasing creative works and writing services">
     <meta property="og:type" content="website">
@@ -19,135 +21,116 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 </head>
 <body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="sticky-nav">
-        <div class="nav-container">
-            <a href="#home" class="logo">WriterPortfolio</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Aatif</a>
             <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="/" class="active">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/blog">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
+            <button class="mobile-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <!-- Skip link for keyboard users -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- ARIA labels for social links -->
-<div class="social-links">
-    <a href="https://github.com/dev-Aatif" target="_blank" aria-label="Visit my GitHub profile">
-        <i class="fab fa-github"></i>
-    </a>
-    <!-- Update other social links similarly -->
-</div>
-        <div class="hero-content">
-            <h1>Your Name</h1>
-            <p class="tagline">Crafting Words That Resonate</p>
-            <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://medium.com/@yourprofile" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Words that Inspire Action</h1>
+                <p class="subtitle">Writer & Content Creator</p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn primary">View My Work</a>
+                    <a href="/blog" class="btn secondary">Read Blog</a>
+                </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="section-container">
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <!-- Skill cards same as before but with added hover effects -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <div class="section-container">
-            <h2>Featured Projects</h2>
-            <div class="portfolio-grid">
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Novel Publication</h3>
-                        <p>Historical Fiction - 2023</p>
-                        <a href="#" class="project-link">Read Excerpt <i class="fas fa-arrow-right"></i></a>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>What I Do</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-pen"></i>
+                        <h3>Creative Writing</h3>
+                        <p>Crafting engaging stories and narratives that captivate readers.</p>
                     </div>
-                </article>
-                <!-- Add more project cards -->
+                    <div class="skill-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Content Writing</h3>
+                        <p>Creating valuable content that connects with your audience.</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Blog Writing</h3>
+                        <p>Delivering insightful articles and engaging blog content.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section dark-section">
-        <div class="section-container">
-            <h2>Let's Collaborate</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> your.email@domain.com</p>
+        <!-- Recent Work Section -->
+        <section id="work" class="section">
+            <div class="container">
+                <h2>Recent Work</h2>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <h3>Project Title</h3>
+                        <p>Brief description of the project and its impact.</p>
+                        <a href="#" class="btn text">Read More →</a>
+                    </article>
+                    <!-- Add more work cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-content">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
                     <div class="social-links">
-                        <!-- Repeat social links from header -->
+                        <a href="https://github.com/dev-Aatif" target="_blank" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!-- Add more social links as needed -->
                     </div>
                 </div>
-                <div class="github-cta">
-                    <h3>View My Writing Process</h3>
-                    <p>Explore my GitHub repositories for writing samples and works in progress:</p>
-                    <a href="https://github.com/yourusername" class="github-button">
-                        <i class="fab fa-github"></i> GitHub Profile
-                    </a>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="skills" class="section">
-    <div class="section-container">
-        <h2>Core Competencies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-header">
-                    <i class="fas fa-pen"></i>
-                    <h3>Creative Writing</h3>
-                </div>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 90%"></div>
-                </div>
-            </div>
-            <!-- Add more skill cards -->
-        </div>
-    </div>
-</section>
-
-    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-
-    <form id="contact-form" class="contact-form">
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-</form>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-        <p>Hosted with ❤️ on GitHub Pages</p>
+        <div class="container">
+            <p>&copy; 2025 Aatif. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
